@@ -9,6 +9,7 @@ import 'package:trip/pages/welcome_page.dart';
 
 import '../nav_pages/main_page.dart';
 import '../pages/home_page.dart';
+import '../pages/translator.dart';
 
 class AppCubitLogics extends StatefulWidget {
   const AppCubitLogics({Key? key}) : super(key: key);
@@ -30,6 +31,9 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
         }
         if (state is LoadedState) {
           return MainPage();
+        }
+        if (state is TranslateState){
+          return Translate();
         }
         if (state is LoadingState) {
           return Center(

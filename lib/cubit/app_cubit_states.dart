@@ -37,3 +37,11 @@ class DetailState extends CubitStates {
   // TODO: implement props
   List<Object> get props => [places];
 }
+class TranslateState extends CubitStates{
+  TranslateState(this.places);
+  final DataModel places;
+  @override
+  // TODO: implement props
+  List<Object> get props => [places];
+
+}

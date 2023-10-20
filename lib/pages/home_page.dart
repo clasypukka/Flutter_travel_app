@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trip/cubit/app_cubit_states.dart';
 import 'package:trip/cubit/app_cubits.dart';
 import 'package:trip/misc/colors.dart';
+import 'package:trip/pages/translator.dart';
 import 'package:trip/widgets/app_large_text.dart';
 import 'package:trip/widgets/app_text.dart';
 
@@ -120,7 +121,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   Text("Bye"),
                 ]),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 20, right: 20),
                 child: Row(
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 8),
               Container(
                 height: 120,
                 width: double.maxFinite,
@@ -182,6 +183,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           return Container();
         }
       }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const Translate()),
+          );
+
+        },
+        child: Icon(Icons.translate_outlined),
+      ),
     );
   }
 }

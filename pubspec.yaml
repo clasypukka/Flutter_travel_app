@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc:
   equatable:
   http:
+  translator: ^0.1.7
 
 dev_dependencies:
   flutter_test:
